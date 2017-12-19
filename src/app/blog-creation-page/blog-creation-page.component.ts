@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogCreationPageComponent implements OnInit {
 
+  title: string;
+  layout: string;
+  font: string;
+  color: any;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    console.log(this.title, this.layout, this.font, this.color);
+  }
+
+  isReadyForSubmit(){
+    return this.title && this.layout && this.font && this.color;
   }
 
 }

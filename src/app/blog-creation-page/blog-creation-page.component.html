@@ -1,0 +1,66 @@
+<div class="div_display-flex">
+    <mat-card style="text-align: center" class="margin_lg">
+        <h2>Create your blog title: </h2>
+
+        <mat-form-field>
+            <input matInput [(ngModel)]="title" placeholder="Blog title">
+        </mat-form-field>
+    </mat-card>
+</div>
+
+<div class="div_display-flex">
+    <mat-card style="text-align: center" class="margin_lg">
+        <h2>Choose your page layout: </h2>
+        <mat-radio-group [(ngModel)]="layout">
+            <mat-radio-button class="padding_sm" value="1">Layout 1</mat-radio-button>
+            <mat-radio-button class="padding_sm" value="2">Layout 2</mat-radio-button>
+            <mat-radio-button class="padding_sm" value="3">Layout 3</mat-radio-button>
+
+            <!--<mat-radio-button class="padding_lg" value="3"></mat-radio-button>-->
+            <!--<mat-radio-button class="padding_lg" value="1"></mat-radio-button>-->
+            <!--<mat-radio-button class="padding_lg" value="2"></mat-radio-button>-->
+        </mat-radio-group>
+        <div class="div_display-flex">
+        <div style="background-image: url('https://image.ibb.co/iC6UAR/layout_1.png')" class="option-size">
+        </div>
+        <div style="background-image: url('https://image.ibb.co/dTh84m/layout_2.png')" class="option-size">
+        </div>
+        <div style="background-image: url('https://image.ibb.co/bsJ4c6/layout_3.png')" class="option-size">
+        </div>
+        </div>
+    </mat-card>
+</div>
+
+<div class="div_display-flex">
+    <mat-card style="text-align: center" class="margin_lg">
+        <h2>Choose your blog font: </h2>
+        <mat-radio-group [(ngModel)]="font">
+            <mat-radio-button class="padding_sm" value="Trocchi">Trocchi</mat-radio-button>
+            <mat-radio-button class="padding_sm" value="Enriqueta">Enriqueta</mat-radio-button>
+            <mat-radio-button class="padding_sm" value="Great Vibes">Great Vibes</mat-radio-button>
+        </mat-radio-group>
+        <div class="div_display-flex">
+            <div class="font_option-size">
+                <span style="font-family: 'Trocchi', serif;">Example text</span>
+            </div>
+            <div class="font_option-size">
+                <span style="font-family: 'Enriqueta', arial, serif;">Example text</span>
+            </div>
+            <div class="font_option-size">
+                <span style="font-family: 'Great Vibes', cursive;">Example text</span>
+            </div>
+        </div>
+    </mat-card>
+</div>
+
+<div class="div_display-flex">
+    <mat-card style="text-align: center" class="margin_lg">
+        <h2>Choose your blog background color: </h2>
+        <input [(ngModel)]="color" type="color">
+    </mat-card>
+</div>
+
+
+<div class="margin_md">
+    <button *ngIf=" " style="background-color: #673ab7" mat-button (click)="onSubmit()">Create</button>
+</div>
