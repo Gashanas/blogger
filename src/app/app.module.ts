@@ -6,6 +6,8 @@ import { BlogCreationPageComponent } from './blog-creation-page/blog-creation-pa
 import { HomeComponent } from './home/home.component';
 import { appRoutes } from './app.routes';
 import { RouterModule } from '@angular/router';
+import { ArticleComponent } from './article/article.component';
+import { ModalComponent } from './shared/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,8 @@ import { RouterModule } from '@angular/router';
     BlogPageComponent,
     BlogCreationPageComponent,
     HomeComponent,
+    ArticleComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
