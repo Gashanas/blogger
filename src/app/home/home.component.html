@@ -1,3 +1,38 @@
-<p>
-  home works!
-</p>
+<mat-toolbar color="primary">
+    <span>Blogger</span>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+
+    <!--<span>Right Aligned Text</span>-->
+</mat-toolbar>
+
+<mat-card class="margin_max">
+    <h1>Create your blog !</h1>
+    <div class="margin_md">
+        <p class="text__align-center">Here you can create unique page for your fascinating blog. Just press this magic
+            button below.</p>
+    </div>
+
+    <div>
+        <button mat-button (click)="navigateToBlogCreationPage()">Create your blog!</button>
+    </div>
+</mat-card>
+
+<mat-card style="text-align: center" class="margin_max">
+    <h2>Already have created a blog page ?</h2>
+    <div class="margin_md">
+        <p class="text__align-center">If you already have created your blog page, just write your blog title in the
+            field and press open blog.</p>
+    </div>
+
+    <!--<form [formGroup]="form">-->
+        <mat-form-field>
+            <input matInput [(ngModel)]="title" placeholder="Blog title">
+        </mat-form-field>
+    <!--</form>-->
+
+    <div>
+        <button mat-button (click)="openBlog()">Open blog</button>
+    </div>
+</mat-card>

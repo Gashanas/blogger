@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+
+h1 { color: rgba(85, 87, 77, 0.75); font-family: 'Raleway',sans-serif; font-size: 62px; font-weight: 800; line-height: 72px; margin: 0 0 24px; text-align: center; text-transform: uppercase; }
+
+
+h2 { color: rgba(85, 87, 77, 0.75); font-family: 'Raleway',sans-serif; font-size: 30px; font-weight: 800; line-height: 36px; margin: 0 0 24px; text-align: center; }
+
+
+p { color: rgba(85, 87, 77, 0.75); font-family: 'Raleway',sans-serif; font-size: 18px; font-weight: 500; line-height: 32px; margin: 0 0 24px; }
+
+
+a { color: #c8c8c8; text-decoration: underline; }
+
+
+a:hover { color: #1c1c1c; text-decoration: underline; }
+
+.margin_sm {
+    margin: 12px;
+}
+
+.margin_md {
+    margin: 24px;
+}
+
+.margin_lg {
+    margin: 32px;
+}
+
+.margin_max {
+    margin: 80px
+}
+
+.padding_sm {
+    padding: 12px;
+}
+
+.padding_md {
+    padding: 24px;
+}
+
+.pading_lg {
+    padding: 32px;
+}
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';

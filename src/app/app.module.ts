@@ -10,6 +10,12 @@ import { ArticleComponent } from './article/article.component';
 import { ModalComponent } from './shared/modal/modal.component';
 import { NavComponent } from './nav/nav.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
+import { FormsModule } from '@angular/forms';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,10 +27,15 @@ import { NavComponent } from './nav/nav.component';
     NavComponent,
   ],
   imports: [
-    BrowserModule,
+      FormsModule,
+      BrowserModule,
+      BrowserAnimationsModule,
+      NoopAnimationsModule,
+      MaterialModule,
     RouterModule.forRoot(appRoutes),
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
