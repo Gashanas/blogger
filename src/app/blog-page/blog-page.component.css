@@ -1,0 +1,23 @@
+.basic-card-width {
+    max-width: 500px;
+}
+
+.advanced-card-width {
+
+}
+
+button {
+    margin:0 auto;
+    display:block;
+    background-color: #673ab7
+}
+
+.div_display-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.small-card-width {
+
+}

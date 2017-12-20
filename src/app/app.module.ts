@@ -14,6 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { FormsModule } from '@angular/forms';
+import { BlogService } from './services/blog.service';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -27,6 +29,7 @@ import { FormsModule } from '@angular/forms';
     NavComponent,
   ],
   imports: [
+      HttpModule,
       FormsModule,
       BrowserModule,
       BrowserAnimationsModule,
@@ -34,7 +37,7 @@ import { FormsModule } from '@angular/forms';
       MaterialModule,
     RouterModule.forRoot(appRoutes),
   ],
-  providers: [],
+  providers: [BlogService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

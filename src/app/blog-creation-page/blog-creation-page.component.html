@@ -1,5 +1,21 @@
 <div class="div_display-flex">
     <mat-card style="text-align: center" class="margin_lg">
+        <h2>Write your personal information: </h2>
+
+        <mat-form-field>
+            <input matInput [(ngModel)]="username" placeholder="surname">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [(ngModel)]="name" placeholder="name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput [(ngModel)]="surname" placeholder="surname">
+        </mat-form-field>
+    </mat-card>
+</div>
+
+<div class="div_display-flex">
+    <mat-card style="text-align: center" class="margin_lg">
         <h2>Create your blog title: </h2>
 
         <mat-form-field>
@@ -31,7 +47,7 @@
     </mat-card>
 </div>
 
-<div class="div_display-flex">
+<div class="div_display-flex" style="font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal;">
     <mat-card style="text-align: center" class="margin_lg">
         <h2>Choose your blog font: </h2>
         <mat-radio-group [(ngModel)]="font">
@@ -62,5 +78,8 @@
 
 
 <div class="margin_md">
-    <button *ngIf=" " style="background-color: #673ab7" mat-button (click)="onSubmit()">Create</button>
+    <div class="div_display-flex">
+    <button class="margin_sm" style="background-color: #673ab7" mat-button (click)="fetchBlogInfo()">Cancel</button>
+    <button class="margin_sm" *ngIf="isReadyForSubmit()" style="background-color: #673ab7" mat-button (click)="onSubmit()">Create</button>
+    </div>
 </div>

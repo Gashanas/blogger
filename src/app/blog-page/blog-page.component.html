@@ -1,3 +1,40 @@
-<p>
-  blog-page works!
+<div>
+    <mat-card class="margin_lg">
+        <h1>{{title}}</h1>
+        <div class="margin_md">
+            <p class="text__align-center">Here you can create unique page for your fascinating blog. Just press this
+                magic
+                button below.</p>
+        </div>
+
+        <!--<div>-->
+        <!--<button mat-button (click)="navigateToBlogCreationPage()">Create your blog!</button>-->
+        <!--</div>-->
+    </mat-card>
+</div>
+
+<p *ngIf="postErroro" style="background-color: #ff7580" class="margin_sm">
+    <span class="margin_sm">{{postErroro}}</span>
 </p>
+<div class="div_display-flex">
+    <div *ngFor="let post of posts">
+        <mat-card class="margin_lg basic-card-width" style="width: 550px;hight:230px;">
+            <h2>{{post.postTitle}}</h2>
+            <div>
+                <p>{{post.post}}</p>
+            </div>
+        </mat-card>
+    </div>
+
+    <mat-card class="margin_lg basic-card-width">
+        <h2>Add new article or message!</h2>
+
+        <mat-form-field>
+            <input matInput placeholder="Post title" [(ngModel)]="postTitle">
+        </mat-form-field>
+        <mat-form-field  style="width: 500px;">
+            <textarea matInput [(ngModel)]="postMessage" placeholder="Write text here"></textarea>
+        </mat-form-field>
+        <button mat-button (click)="addPost()">Add text!</button>
+    </mat-card>
+</div>
